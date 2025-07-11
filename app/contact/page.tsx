@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowLeft, Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, Clock, Globe } from "lucide-react"
+import { ArrowLeft, Mail, Phone, MapPin, Github, Linkedin, Send, Clock, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Navigation } from "@/components/navigation"
@@ -35,7 +35,7 @@ export default function ContactPage() {
       icon: Clock,
       title: "Response Time",
       value: "Within 24 hours",
-      description: "I'll get back to you quickly",
+      description: "I&apos;ll get back to you quickly",
       color: "from-orange-500 to-orange-600",
     },
   ]
@@ -102,10 +102,10 @@ export default function ContactPage() {
                   📧
                 </motion.div>
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                  Let's Connect
+                  LeI&apos;s Connect
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                  Ready to bring your ideas to life? I'd love to hear about your project and discuss how we can work
+                  Ready to bring your ideas to life? I&apos;d love to hear about your project and discuss how we can work
                   together to create something amazing.
                 </p>
               </div>
@@ -131,7 +131,7 @@ export default function ContactPage() {
                       Send me a message
                     </CardTitle>
                     <p className="text-muted-foreground">
-                      Fill out the form below and I'll get back to you as soon as possible.
+                      Fill out the form below and I&apos;ll get back to you as soon as possible.
                     </p>
                   </CardHeader>
                   <CardContent>
@@ -151,8 +151,8 @@ export default function ContactPage() {
                 <div>
                   <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
                   <p className="text-muted-foreground mb-8 leading-relaxed">
-                    I'm always excited to work on new projects and help bring innovative ideas to life. Whether you have
-                    a specific project in mind or just want to explore possibilities, let's start a conversation.
+                    I&apos;m always excited to work on new projects and help bring innovative ideas to life. Whether you have
+                    a specific project in mind or just want to explore possibilities, leI&apos;s start a conversation.
                   </p>
                 </div>
 
@@ -268,7 +268,7 @@ export default function ContactPage() {
                 Ready to Start Your Project?
               </h2>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Let's discuss your ideas and create something extraordinary together. I'm here to help turn your vision
+                LeI&apos;s discuss your ideas and create something extraordinary together. I&apos;m here to help turn your vision
                 into reality.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

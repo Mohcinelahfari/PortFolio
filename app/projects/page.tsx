@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Navigation } from "@/components/navigation"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function ProjectsPage() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -184,7 +185,7 @@ export default function ProjectsPage() {
                           Featured
                         </Badge>
                       )}
-                      <img
+                      <Image
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
                         className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"

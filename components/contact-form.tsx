@@ -293,7 +293,7 @@ export function ContactForm() {
             <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
             <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
             <SelectItem value="50k-plus">$50,000+</SelectItem>
-            <SelectItem value="discuss">Let's discuss</SelectItem>
+            <SelectItem value="discuss">LeI&apos;s discuss</SelectItem>
           </SelectContent>
         </Select>
       </motion.div>
@@ -390,7 +390,7 @@ export function ContactForm() {
       </motion.div>
 
       <p className="text-sm text-muted-foreground text-center">
-        I'll get back to you within 24 hours. All information is kept confidential.
+        I&apos;ll get back to you within 24 hours. All information is kept confidential.
       </p>
     </form>
   )

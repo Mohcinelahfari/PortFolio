@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { Navigation } from "@/components/navigation"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function FrontendSkillsPage() {
   const frontendTechnologies = [
@@ -195,7 +196,7 @@ export default function FrontendSkillsPage() {
                 >
                   <Card className="h-full overflow-hidden hover:shadow-xl transition-shadow">
                     <div className="relative overflow-hidden">
-                      <img
+                      <Image
                         src={project.image || "/placeholder.svg"}
                         alt={project.name}
                         className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"

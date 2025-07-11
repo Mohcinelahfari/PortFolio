@@ -12,6 +12,7 @@ import { AnimatedCounter } from "@/components/animated-counter"
 import Link from "next/link"
 import { Database, Globe, Palette, Server, Smartphone } from "lucide-react"
 import { CVDownload } from "@/components/cv-download"
+import Image from "next/image"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -287,7 +288,7 @@ export default function HomePage() {
                 className="mb-6"
               >
                 <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 text-sm">
-                  👋 Hello, I'm {personalInfo.name}
+                  👋 Hello, I&apos;m {personalInfo.name}
                 </Badge>
               </motion.div>
 
@@ -392,7 +393,7 @@ export default function HomePage() {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 p-1 rounded-full">
                     <div className="w-full h-full rounded-full overflow-hidden bg-background">
-                      <img
+                      <Image
                         src={ "/v1photo.png"}
                         alt={personalInfo.name}
                         className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"

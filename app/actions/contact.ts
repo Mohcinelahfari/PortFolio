@@ -50,7 +50,7 @@ export async function submitContactForm(prevState: any, formData: FormData) {
       return {
         success: false,
         error: true,
-        message: error.errors[0].message,
+        message: error.issues[0]?.message || "Validation error",
       }
     }
 

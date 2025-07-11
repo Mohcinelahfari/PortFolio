@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Navigation } from "@/components/navigation"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function AboutPage() {
   const personalInfo = {
@@ -183,9 +184,9 @@ export default function AboutPage() {
                     About Me
                   </h1>
                   <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                    My name is Mohcine Lahfari, and I'm a passionate Full-Stack Developer specializing in React.js,
+                    My name is Mohcine Lahfari, and I&apos;m a passionate Full-Stack Developer specializing in React.js,
                     Next.js, and Laravel. I build modern, responsive web applications from intuitive front-end
-                    interfaces to robust back-end systems. I'm dedicated to writing clean code, optimizing performance,
+                    interfaces to robust back-end systems. I&apos;m dedicated to writing clean code, optimizing performance,
                     and creating meaningful digital solutions.
                   </p>
                   <div className="grid grid-cols-2 gap-4 text-sm">
@@ -209,7 +210,7 @@ export default function AboutPage() {
                   <div className="relative w-80 h-80 mx-auto">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse" />
                     <div className="absolute inset-2 bg-background rounded-full flex items-center justify-center">
-                      <img
+                      <Image
                         src="/v1photo.png"
                         alt="Mohcine Lahfari - Full Stack Developer"
                         className="w-72 h-72 rounded-full object-cover border-4 border-white/10"
@@ -235,17 +236,17 @@ export default function AboutPage() {
               <h2 className="text-4xl font-bold mb-8">My Development Journey</h2>
               <div className="text-lg text-muted-foreground leading-relaxed space-y-6">
                 <p>
-                  Hi, I'm Mohcine Lahfari, a passionate Full-Stack Developer with expertise in React.js, Next.js, and
+                  Hi, I&apos;m Mohcine Lahfari, a passionate Full-Stack Developer with expertise in React.js, Next.js, and
                   Laravel. I specialize in creating clean, scalable, and high-performance web applications that
                   seamlessly connect dynamic user interfaces with powerful backend architectures.
                 </p>
                 <p>
-                  Throughout my career, I've completed three professional internships at leading companies including
+                  Throughout my career, I&apos;ve completed three professional internships at leading companies including
                   Cosumar, My Team, and Black Service Solution. These experiences have given me real-world exposure to
                   diverse projects and helped me refine my development skills across multiple technology stacks.
                 </p>
                 <p>
-                  I'm known for being highly motivated, detail-oriented, and committed to delivering exceptional work. I
+                  I&apos;m known for being highly motivated, detail-oriented, and committed to delivering exceptional work. I
                   thrive on solving complex technical challenges and transforming innovative ideas into impactful
                   digital solutions that make a difference.
                 </p>
@@ -561,11 +562,11 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                Let's Build Something Extraordinary Together
+                Let&apos;s Build Something Extraordinary Together
               </h2>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                I'm always excited to collaborate on new projects and work with passionate individuals and teams.
-                Whether you have a specific vision or want to explore innovative possibilities, I'd love to connect and
+                I&apos;m always excited to collaborate on new projects and work with passionate individuals and teams.
+                Whether you have a specific vision or want to explore innovative possibilities, I&apos;d love to connect and
                 discuss how we can create something amazing together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
