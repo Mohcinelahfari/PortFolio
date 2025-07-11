@@ -10,40 +10,40 @@ import Link from "next/link"
 
 export default function AboutPage() {
   const personalInfo = {
-    name: "John Doe",
+    name: "Mohcine Lahfari",
     title: "Full Stack Developer",
-    location: "San Francisco, CA",
-    experience: "5+ Years",
-    email: "hello@devportfolio.com",
-    phone: "+1 (555) 123-4567",
+    location: "Casablanca, Morocco",
+    experience: "2+ Years",
+    email: "mohcinelahfari01@gmail.com",
+    phone: "+212 700534286",
   }
 
   const achievements = [
     {
       icon: Award,
-      title: "Top Developer Award",
-      description: "Recognized as top 1% developer on multiple platforms",
-      year: "2023",
+      title: "Professional Internships",
+      description: "Completed 3 successful internships at leading companies",
+      year: "2024-2025",
       color: "from-blue-500 to-blue-600",
     },
     {
       icon: Users,
-      title: "150+ Happy Clients",
-      description: "Successfully delivered projects for clients worldwide",
-      year: "2024",
+      title: "Mobile App Development",
+      description: "Built employee management apps with React Native",
+      year: "2024-2025",
       color: "from-blue-600 to-blue-700",
     },
     {
       icon: Zap,
-      title: "Innovation Leader",
-      description: "Led development of cutting-edge AI-powered solutions",
-      year: "2023",
+      title: "Full-Stack Solutions",
+      description: "Developed complete web applications with Laravel & React",
+      year: "2024-2025",
       color: "from-blue-700 to-purple-600",
     },
     {
       icon: Coffee,
-      title: "Open Source Contributor",
-      description: "Active contributor to major open source projects",
+      title: "Technology Enthusiast",
+      description: "Passionate about modern web technologies and best practices",
       year: "Ongoing",
       color: "from-purple-600 to-purple-700",
     },
@@ -51,32 +51,73 @@ export default function AboutPage() {
 
   const timeline = [
     {
-      year: "2024",
-      title: "Senior Full Stack Developer",
-      company: "Tech Innovations Inc.",
-      description: "Leading development of enterprise-scale applications and mentoring junior developers.",
+      date: "Jan 2025",
+      fullDate: "March 2025 - April 2025",
+      title: "Mobile Developer - Internship",
+      company: "Black Service Solution - Casablanca Technopark",
+      description:
+        "Developing a mobile application for employee and department management. Designing user interface (UI) with React Native (Expo). Creating screens for adding, editing, and deleting employees with modern mobile development practices.",
+      current: false,
+    },
+    {
+      date: "novembre 2024",
+      fullDate: "novembre 2024 - March 2025",
+      title: "Web Application Developer - Internship",
+      company: "My Team - Bouskoura",
+      description:
+        "Developed an employee and department management system. Implemented a leave and travel booking module. Created a medication tracking system linked to CNSS. Designed and optimized the database architecture. Implemented authentication and application security features.",
+      current: false,
+    },
+    {
+      date: "March 2024",
+      fullDate: "March 2024 - April 2024",
+      title: "Mobile Developer - Internship",
+      company: "Cosumar - Casablanca",
+      description:
+        "Developed a mobile application using React Native, Expo, and NativeWind for employee schedule management. Collaborated with the development team to design and implement user-friendly interfaces. Ensured application performance and responsiveness across various devices and platforms.",
+      current: false,
+    },
+  ]
+
+  const education = [
+    {
+      period: "Oct 2024 - Present",
+      degree: "Professional Bachelor's Degree",
+      field: "Development and Security",
+      school: "IFIAG School",
+      location: "Casablanca, Morocco",
+      status: "In Progress",
+      description:
+        "Advanced training in software development with specialization in computer security and cybersecurity. Focus on secure coding practices, vulnerability assessment, and modern security frameworks.",
       current: true,
+      icon: "🎓",
+      color: "from-blue-500 to-blue-600",
     },
     {
-      year: "2022",
-      title: "Full Stack Developer",
-      company: "Digital Solutions Co.",
-      description: "Developed and maintained multiple client projects using React, Node.js, and cloud technologies.",
+      period: "Oct 2022 - Jun 2024",
+      degree: "Specialized Technician Diploma",
+      field: "Digital Development",
+      school: "IFIAG School",
+      location: "Casablanca, Morocco",
+      status: "Graduated",
+      description:
+        "Comprehensive training in web and mobile development, including modern technologies like React, Laravel, React Native, and full-stack development methodologies. Hands-on experience with real-world projects.",
       current: false,
+      icon: "💻",
+      color: "from-blue-600 to-blue-700",
     },
     {
-      year: "2020",
-      title: "Frontend Developer",
-      company: "StartupXYZ",
-      description: "Built responsive web applications and improved user experience across multiple products.",
+      period: "Sep 2021 - Jun 2022",
+      degree: "Baccalaureate",
+      field: "Life and Earth Sciences",
+      school: "Othmân ibn Affân High School",
+      location: "Morocco",
+      status: "Graduated",
+      description:
+        "Scientific baccalaureate with specialization in Life and Earth Sciences, developing strong analytical thinking, problem-solving skills, and scientific methodology that supports logical programming approaches.",
       current: false,
-    },
-    {
-      year: "2019",
-      title: "Junior Developer",
-      company: "WebDev Agency",
-      description: "Started my professional journey, learning modern web development practices and frameworks.",
-      current: false,
+      icon: "🔬",
+      color: "from-blue-700 to-purple-600",
     },
   ]
 
@@ -94,22 +135,24 @@ export default function AboutPage() {
   const values = [
     {
       title: "Quality First",
-      description: "I believe in delivering high-quality code that stands the test of time.",
+      description: "I believe in delivering high-quality code that stands the test of time and follows best practices.",
       icon: "⭐",
     },
     {
       title: "Continuous Learning",
-      description: "Technology evolves rapidly, and I'm committed to staying at the forefront.",
+      description:
+        "Technology evolves rapidly, and I'm committed to staying current with the latest developments and trends.",
       icon: "📈",
     },
     {
       title: "Collaboration",
-      description: "Great products are built by great teams working together towards common goals.",
+      description:
+        "Great products are built by great teams working together towards common goals with clear communication.",
       icon: "🤝",
     },
     {
       title: "Innovation",
-      description: "I love exploring new technologies and finding creative solutions to complex problems.",
+      description: "I love exploring new technologies and finding creative solutions to complex technical challenges.",
       icon: "💡",
     },
   ]
@@ -140,9 +183,10 @@ export default function AboutPage() {
                     About Me
                   </h1>
                   <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                    I'm a passionate full stack developer with over 5 years of experience creating digital solutions
-                    that make a difference. I love turning complex problems into simple, beautiful, and intuitive
-                    designs.
+                    My name is Mohcine Lahfari, and I'm a passionate Full-Stack Developer specializing in React.js,
+                    Next.js, and Laravel. I build modern, responsive web applications from intuitive front-end
+                    interfaces to robust back-end systems. I'm dedicated to writing clean code, optimizing performance,
+                    and creating meaningful digital solutions.
                   </p>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div className="flex items-center gap-2">
@@ -166,8 +210,8 @@ export default function AboutPage() {
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse" />
                     <div className="absolute inset-2 bg-background rounded-full flex items-center justify-center">
                       <img
-                        src="/placeholder.svg?height=300&width=300"
-                        alt="Profile"
+                        src="/v1photo.png"
+                        alt="Mohcine Lahfari - Full Stack Developer"
                         className="w-72 h-72 rounded-full object-cover border-4 border-white/10"
                       />
                     </div>
@@ -188,23 +232,22 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-8">My Journey</h2>
+              <h2 className="text-4xl font-bold mb-8">My Development Journey</h2>
               <div className="text-lg text-muted-foreground leading-relaxed space-y-6">
                 <p>
-                  My journey into software development began during my computer science studies, where I discovered my
-                  passion for creating digital solutions that solve real-world problems. What started as curiosity about
-                  how websites work evolved into a deep love for crafting exceptional user experiences.
+                  Hi, I'm Mohcine Lahfari, a passionate Full-Stack Developer with expertise in React.js, Next.js, and
+                  Laravel. I specialize in creating clean, scalable, and high-performance web applications that
+                  seamlessly connect dynamic user interfaces with powerful backend architectures.
                 </p>
                 <p>
-                  Over the years, I've had the privilege of working with startups, established companies, and individual
-                  entrepreneurs, helping them bring their visions to life through code. Each project has taught me
-                  something new and reinforced my belief that technology should be accessible, beautiful, and
-                  meaningful.
+                  Throughout my career, I've completed three professional internships at leading companies including
+                  Cosumar, My Team, and Black Service Solution. These experiences have given me real-world exposure to
+                  diverse projects and helped me refine my development skills across multiple technology stacks.
                 </p>
                 <p>
-                  When I'm not coding, you'll find me exploring new technologies, contributing to open source projects,
-                  or sharing knowledge with the developer community. I believe in continuous learning and staying
-                  curious about the ever-evolving world of technology.
+                  I'm known for being highly motivated, detail-oriented, and committed to delivering exceptional work. I
+                  thrive on solving complex technical challenges and transforming innovative ideas into impactful
+                  digital solutions that make a difference.
                 </p>
               </div>
             </motion.div>
@@ -223,7 +266,7 @@ export default function AboutPage() {
             >
               <h2 className="text-4xl font-bold mb-4">Achievements & Recognition</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Milestones and recognition that mark my professional journey
+                Key milestones and accomplishments that define my professional journey
               </p>
             </motion.div>
 
@@ -267,9 +310,9 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-4">Professional Timeline</h2>
+              <h2 className="text-4xl font-bold mb-4">Professional Experience Timeline</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                My career progression and key milestones
+                My career progression and key professional milestones
               </p>
             </motion.div>
 
@@ -280,7 +323,7 @@ export default function AboutPage() {
 
                 {timeline.map((item, index) => (
                   <motion.div
-                    key={item.year}
+                    key={item.date}
                     className="relative flex items-start gap-8 pb-12"
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -289,25 +332,26 @@ export default function AboutPage() {
                   >
                     {/* Timeline dot */}
                     <div
-                      className={`relative z-10 w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-sm ${
+                      className={`relative z-10 w-20 h-20 rounded-full flex items-center justify-center text-white font-bold text-xs text-center ${
                         item.current
                           ? "bg-gradient-to-r from-blue-500 to-purple-500 ring-4 ring-blue-500/20"
                           : "bg-gradient-to-r from-blue-600 to-blue-700"
                       }`}
                     >
-                      {item.year}
+                      {item.date}
                     </div>
 
                     {/* Content */}
                     <Card className="flex-1 bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
                       <CardHeader>
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between mb-2">
                           <CardTitle className="text-xl">{item.title}</CardTitle>
                           {item.current && (
                             <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white">Current</Badge>
                           )}
                         </div>
                         <p className="text-blue-500 font-medium">{item.company}</p>
+                        <p className="text-sm text-muted-foreground">{item.fullDate}</p>
                       </CardHeader>
                       <CardContent>
                         <p className="text-muted-foreground leading-relaxed">{item.description}</p>
@@ -320,7 +364,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Values */}
+        {/* Education Section */}
         <section className="py-20 bg-gradient-to-br from-blue-500/5 to-purple-500/5">
           <div className="container mx-auto px-6">
             <motion.div
@@ -330,9 +374,117 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-4">My Values</h2>
+              <h2 className="text-4xl font-bold mb-4">Education & Academic Background</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                The principles that guide my work and professional relationships
+                My academic journey and professional certifications that shaped my expertise
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-1 gap-8">
+                {education.map((edu, index) => (
+                  <motion.div
+                    key={edu.degree}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.02 }}
+                    className="group"
+                  >
+                    <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 overflow-hidden">
+                      <CardContent className="p-8">
+                        <div className="flex items-start gap-6">
+                          {/* Icon */}
+                          <div
+                            className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${edu.color} flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 transition-transform`}
+                          >
+                            {edu.icon}
+                          </div>
+
+                          {/* Content */}
+                          <div className="flex-1">
+                            <div className="flex items-center justify-between mb-3">
+                              <div>
+                                <h3 className="text-2xl font-bold group-hover:text-blue-500 transition-colors">
+                                  {edu.degree}
+                                </h3>
+                                <p className="text-lg text-blue-500 font-medium">{edu.field}</p>
+                              </div>
+                              {edu.current && (
+                                <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+                                  In Progress
+                                </Badge>
+                              )}
+                              {!edu.current && (
+                                <Badge variant="secondary" className="bg-green-500/20 text-green-400">
+                                  {edu.status}
+                                </Badge>
+                              )}
+                            </div>
+
+                            <div className="flex items-center gap-4 mb-4 text-muted-foreground">
+                              <div className="flex items-center gap-2">
+                                <Calendar className="h-4 w-4" />
+                                <span>{edu.period}</span>
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <MapPin className="h-4 w-4" />
+                                <span>{edu.school}</span>
+                              </div>
+                            </div>
+
+                            <p className="text-muted-foreground leading-relaxed">{edu.description}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Education Stats */}
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-500 mb-2">3+</div>
+                <div className="text-muted-foreground text-sm">Years of Study</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-500 mb-2">2</div>
+                <div className="text-muted-foreground text-sm">Diplomas Earned</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-500 mb-2">1</div>
+                <div className="text-muted-foreground text-sm">In Progress</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-500 mb-2">IFIAG</div>
+                <div className="text-muted-foreground text-sm">Specialized School</div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Values */}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold mb-4">Core Values & Principles</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                The fundamental principles that guide my work ethic and professional relationships
               </p>
             </motion.div>
 
@@ -360,7 +512,7 @@ export default function AboutPage() {
         </section>
 
         {/* Interests */}
-        <section className="py-20">
+        <section className="py-20 bg-gradient-to-br from-blue-500/5 to-purple-500/5">
           <div className="container mx-auto px-6">
             <motion.div
               className="text-center mb-16"
@@ -369,9 +521,9 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-4">Beyond Code</h2>
+              <h2 className="text-4xl font-bold mb-4">Beyond Development</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                My interests and hobbies that keep me inspired and balanced
+                Personal interests and hobbies that keep me inspired, creative, and well-balanced
               </p>
             </motion.div>
 
@@ -399,7 +551,7 @@ export default function AboutPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-500/5 to-purple-500/5">
+        <section className="py-20">
           <div className="container mx-auto px-6">
             <motion.div
               className="text-center max-w-3xl mx-auto"
@@ -409,11 +561,12 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                Let's Create Something Amazing
+                Let's Build Something Extraordinary Together
               </h2>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                I'm always excited to work on new projects and collaborate with passionate people. Whether you have a
-                specific idea or just want to explore possibilities, I'd love to hear from you.
+                I'm always excited to collaborate on new projects and work with passionate individuals and teams.
+                Whether you have a specific vision or want to explore innovative possibilities, I'd love to connect and
+                discuss how we can create something amazing together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
@@ -422,12 +575,12 @@ export default function AboutPage() {
                     className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white"
                   >
                     <Heart className="mr-2 h-5 w-5" />
-                    Get In Touch
+                    Start a Conversation
                   </Button>
                 </Link>
                 <Link href="/projects">
                   <Button variant="outline" size="lg" className="border-2 bg-transparent">
-                    View My Work
+                    Explore My Portfolio
                   </Button>
                 </Link>
               </div>

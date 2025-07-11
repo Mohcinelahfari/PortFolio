@@ -14,39 +14,13 @@ export default function MobileSkillsPage() {
     {
       name: "React Native",
       level: 90,
-      experience: "3+ years",
+      experience: "2+ years",
       description: "Cross-platform mobile development with native performance and shared codebase",
       projects: 25,
       icon: "⚛️",
       color: "from-blue-500 to-blue-600",
     },
-    {
-      name: "Flutter",
-      level: 85,
-      experience: "2+ years",
-      description: "Google's UI toolkit for building natively compiled mobile applications",
-      projects: 18,
-      icon: "🦋",
-      color: "from-blue-600 to-blue-700",
-    },
-    {
-      name: "Swift",
-      level: 78,
-      experience: "2+ years",
-      description: "Native iOS development with Apple's modern programming language",
-      projects: 12,
-      icon: "🍎",
-      color: "from-orange-500 to-orange-600",
-    },
-    {
-      name: "Kotlin",
-      level: 75,
-      experience: "2+ years",
-      description: "Modern Android development with Google's preferred language",
-      projects: 10,
-      icon: "🤖",
-      color: "from-green-500 to-green-600",
-    },
+    
     {
       name: "Expo",
       level: 88,
@@ -124,50 +98,41 @@ export default function MobileSkillsPage() {
     },
   ]
 
-  const featuredProjects = [
-    {
-      name: "Fitness Tracking App",
-      tech: ["React Native", "Redux", "Firebase", "HealthKit"],
-      description: "Comprehensive fitness app with workout tracking, nutrition logging, and social features",
-      image: "/placeholder.svg?height=200&width=300",
-      github: "#",
-      live: "#",
-      platforms: ["iOS", "Android"],
-      metrics: {
-        downloads: "100K+",
-        rating: "4.8★",
-        retention: "75%",
-      },
+const featuredProjects = [
+  {
+    name: "Employee Management App",
+    tech: ["React Native", "Javascript", "Firebase"],
+    description:
+      "Mobile application for managing employees and departments with features like attendance tracking, role assignment, and real-time updates",
+    image: "/empl.png",
+    github: "#",
+    live: "#",
+    platforms: ["iOS", "Android"],
+    metrics: {
+      employees: "1K+",
+      departments: "20+",
+      uptime: "99.9%",
     },
-    {
-      name: "E-commerce Mobile App",
-      tech: ["Flutter", "Dart", "Stripe", "Firebase"],
-      description: "Full-featured shopping app with AR try-on, wishlist, and seamless checkout experience",
-      image: "/placeholder.svg?height=200&width=300",
-      github: "#",
-      live: "#",
-      platforms: ["iOS", "Android"],
-      metrics: {
-        users: "50K+",
-        conversion: "12%",
-        revenue: "$500K+",
-      },
+  },
+  {
+    name: "E-commerce Mobile App",
+    tech: ["React Native", "Javascript", "Mysql"],
+    description:
+      "Custom-built mobile shopping application with product browsing, cart management, secure checkout, and push notifications",
+    image: "/ecom.jpeg",
+    github: "#",
+    live: "#",
+    platforms: ["iOS", "Android"],
+    metrics: {
+      products: "1K+",
+      activeUsers: "10K+",
+      orders: "25K+",
     },
-    {
-      name: "Social Media Platform",
-      tech: ["React Native", "TypeScript", "GraphQL", "AWS"],
-      description: "Instagram-like social platform with real-time messaging, stories, and content sharing",
-      image: "/placeholder.svg?height=200&width=300",
-      github: "#",
-      live: "#",
-      platforms: ["iOS", "Android"],
-      metrics: {
-        posts: "1M+",
-        messages: "5M+",
-        engagement: "85%",
-      },
-    },
-  ]
+  },
+
+
+];
+
 
   const developmentTools = [
     { name: "Xcode", category: "iOS Development", icon: "🔨" },

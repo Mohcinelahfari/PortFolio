@@ -26,7 +26,6 @@ export function Navigation() {
     { name: "Frontend", href: "/skills/frontend" },
     { name: "Backend", href: "/skills/backend" },
     { name: "Mobile", href: "/skills/mobile" },
-    { name: "DevOps", href: "/skills/devops" },
   ]
 
   return (
@@ -43,7 +42,7 @@ export function Navigation() {
               className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent cursor-pointer"
               whileHover={{ scale: 1.05 }}
             >
-              DevPortfolio
+              Mohcine Lahfari
             </motion.div>
           </Link>
 

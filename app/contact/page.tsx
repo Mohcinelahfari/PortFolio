@@ -13,21 +13,21 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      value: "hello@devportfolio.com",
+      value: "lahfarimohcine01@gmail.com",
       description: "Send me an email anytime",
       color: "from-blue-500 to-blue-600",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+212 700534286",
       description: "Call me for urgent matters",
       color: "from-green-500 to-green-600",
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "Maroc Casablanca",
       description: "Available for remote work worldwide",
       color: "from-purple-500 to-purple-600",
     },
@@ -44,31 +44,18 @@ export default function ContactPage() {
     {
       icon: Github,
       name: "GitHub",
-      url: "https://github.com",
-      username: "@devportfolio",
+      url: "http://github.com/Mohcinelahfari",
+      username: "@Mohcine Lahfari",
       color: "hover:text-gray-400",
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "https://linkedin.com",
-      username: "@devportfolio",
+      url: "https://www.linkedin.com/in/lahfari-mohcine-353272328/",
+      username: "@Mohcine Lahfari",
       color: "hover:text-blue-400",
     },
-    {
-      icon: Twitter,
-      name: "Twitter",
-      url: "https://twitter.com",
-      username: "@devportfolio",
-      color: "hover:text-blue-400",
-    },
-    {
-      icon: Globe,
-      name: "Website",
-      url: "https://devportfolio.com",
-      username: "devportfolio.com",
-      color: "hover:text-green-400",
-    },
+
   ]
 
   const faqs = [

@@ -14,7 +14,7 @@ export default function FrontendSkillsPage() {
     {
       name: "React",
       level: 98,
-      experience: "5+ years",
+      experience: "1+ years",
       description: "Advanced React development with hooks, context, and performance optimization",
       projects: 45,
       icon: "⚛️",
@@ -23,7 +23,7 @@ export default function FrontendSkillsPage() {
     {
       name: "Next.js",
       level: 95,
-      experience: "4+ years",
+      experience: "2 mounth",
       description: "Full-stack React framework with SSR, SSG, and API routes",
       projects: 35,
       icon: "▲",
@@ -32,21 +32,13 @@ export default function FrontendSkillsPage() {
     {
       name: "TypeScript",
       level: 92,
-      experience: "4+ years",
+      experience: "6 mounth",
       description: "Type-safe JavaScript development for large-scale applications",
       projects: 40,
       icon: "🔷",
       color: "from-blue-500 to-blue-700",
     },
-    {
-      name: "Vue.js",
-      level: 88,
-      experience: "3+ years",
-      description: "Progressive framework for building user interfaces",
-      projects: 25,
-      icon: "💚",
-      color: "from-green-400 to-green-600",
-    },
+
     {
       name: "Tailwind CSS",
       level: 96,
@@ -56,15 +48,7 @@ export default function FrontendSkillsPage() {
       icon: "🎨",
       color: "from-cyan-400 to-cyan-600",
     },
-    {
-      name: "Framer Motion",
-      level: 90,
-      experience: "2+ years",
-      description: "Production-ready motion library for React",
-      projects: 30,
-      icon: "🎭",
-      color: "from-purple-400 to-purple-600",
-    },
+
   ]
 
   const featuredProjects = [
@@ -72,23 +56,23 @@ export default function FrontendSkillsPage() {
       name: "E-Commerce Platform",
       tech: ["React", "Next.js", "TypeScript", "Tailwind"],
       description: "Modern e-commerce solution with advanced filtering and payment integration",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/dash.png",
       github: "#",
       live: "#",
     },
     {
       name: "Dashboard Analytics",
-      tech: ["Vue.js", "TypeScript", "Chart.js"],
+      tech: ["React", "Next.js", "TypeScript", "Tailwind"],
       description: "Real-time analytics dashboard with interactive charts and data visualization",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/ana.png",
       github: "#",
       live: "#",
     },
     {
       name: "Portfolio Website",
-      tech: ["Next.js", "Framer Motion", "Tailwind"],
+      tech: ["React", "Next.js", "TypeScript", "Tailwind"],
       description: "Animated portfolio with smooth transitions and modern design",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/port.jpeg",
       github: "#",
       live: "#",
     },

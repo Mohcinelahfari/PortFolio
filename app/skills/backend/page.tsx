@@ -12,87 +12,42 @@ import Link from "next/link"
 export default function BackendSkillsPage() {
   const backendTechnologies = [
     {
-      name: "Node.js",
-      level: 94,
-      experience: "4+ years",
-      description: "Server-side JavaScript runtime for building scalable network applications",
-      projects: 42,
-      icon: "🟢",
-      color: "from-green-500 to-green-600",
-    },
-    {
-      name: "Python",
-      level: 88,
-      experience: "3+ years",
-      description: "High-level programming language for web development, data analysis, and AI",
-      projects: 28,
-      icon: "🐍",
-      color: "from-blue-500 to-blue-600",
-    },
-    {
-      name: "Express.js",
-      level: 92,
-      experience: "4+ years",
-      description: "Fast, unopinionated web framework for Node.js applications",
-      projects: 38,
-      icon: "⚡",
-      color: "from-gray-600 to-gray-700",
-    },
-    {
-      name: "Django",
-      level: 82,
-      experience: "2+ years",
-      description: "High-level Python web framework for rapid development",
-      projects: 18,
-      icon: "🎯",
-      color: "from-green-600 to-green-700",
-    },
-    {
-      name: "PostgreSQL",
-      level: 90,
-      experience: "3+ years",
-      description: "Advanced open-source relational database system",
-      projects: 35,
-      icon: "🐘",
-      color: "from-blue-600 to-blue-700",
-    },
-    {
-      name: "MongoDB",
-      level: 85,
-      experience: "3+ years",
-      description: "NoSQL document database for modern applications",
-      projects: 32,
-      icon: "🍃",
-      color: "from-green-500 to-green-600",
-    },
-    {
-      name: "Redis",
-      level: 78,
-      experience: "2+ years",
-      description: "In-memory data structure store for caching and session management",
-      projects: 22,
-      icon: "🔴",
-      color: "from-red-500 to-red-600",
-    },
-    {
-      name: "GraphQL",
-      level: 80,
-      experience: "2+ years",
-      description: "Query language and runtime for APIs with flexible data fetching",
-      projects: 15,
-      icon: "🔷",
-      color: "from-pink-500 to-pink-600",
-    },
-    {
-      name: "Docker",
-      level: 86,
-      experience: "3+ years",
-      description: "Containerization platform for application deployment",
-      projects: 30,
-      icon: "🐳",
-      color: "from-blue-500 to-blue-600",
-    },
-  ]
+    name: "ASP .NET C#",
+    level: 90,
+    experience: "2+ years",
+    description: "Framework for building robust, scalable, and secure web applications",
+    projects: 25,
+    icon: "🔵",
+    color: "from-blue-700 to-blue-800",
+  },
+  {
+    name: "PHP",
+    level: 80,
+    experience: "2+ years",
+    description: "A general-purpose scripting language for web development",
+    projects: 30,
+    icon: "🐘",
+    color: "from-purple-500 to-purple-600",
+  },
+  {
+    name: "Laravel",
+    level: 85,
+    experience: "2+ years",
+    description: "PHP framework for web artisans, known for elegant syntax and features",
+    projects: 22,
+    icon: "🛠️",
+    color: "from-orange-500 to-orange-600",
+  },
+  {
+    name: "MySQL",
+    level: 90,
+    experience: "3+ years",
+    description: "Relational database management system for structured data",
+    projects: 40,
+    icon: "🐬",
+    color: "from-blue-600 to-blue-700",
+  },
+];
 
   const architecturePatterns = [
     {
@@ -133,47 +88,52 @@ export default function BackendSkillsPage() {
     },
   ]
 
-  const featuredProjects = [
-    {
-      name: "E-commerce API Platform",
-      tech: ["Node.js", "Express.js", "PostgreSQL", "Redis", "Docker"],
-      description: "Scalable e-commerce backend handling 10K+ concurrent users with real-time inventory management",
-      image: "/placeholder.svg?height=200&width=300",
-      github: "#",
-      live: "#",
-      metrics: {
-        users: "50K+",
-        requests: "1M+/day",
-        uptime: "99.9%",
-      },
+const featuredProjects = [
+  {
+    name: "School Management System",
+    tech: ["Laravel", "Vite.js"],
+    description:
+      "Comprehensive school management platform with student enrollment, class scheduling, grading, and real-time notifications",
+    image: "/school.jpeg",
+    github: "#",
+    live: "#",
+    metrics: {
+      students: "2K+",
+      classes: "500+",
+      uptime: "99.9%",
     },
-    {
-      name: "Real-time Chat System",
-      tech: ["Node.js", "Socket.io", "MongoDB", "Redis"],
-      description: "High-performance chat application with real-time messaging, file sharing, and group management",
-      image: "/placeholder.svg?height=200&width=300",
-      github: "#",
-      live: "#",
-      metrics: {
-        messages: "10M+",
-        concurrent: "5K+",
-        latency: "<50ms",
-      },
+  },
+  {
+    name: "Barber Shop Booking App",
+    tech: ["Laravel", "Vite.js"],
+    description:
+      "Online appointment booking system for barber shops with calendar integration, customer tracking, and real-time updates",
+    image: "/bar.jpeg",
+    github: "#",
+    live: "#",
+    metrics: {
+      bookings: "10K+",
+      users: "3K+",
+      rating: "4.8/5",
     },
-    {
-      name: "Analytics Data Pipeline",
-      tech: ["Python", "Django", "PostgreSQL", "Celery"],
-      description: "Data processing pipeline for analytics with automated reporting and visualization",
-      image: "/placeholder.svg?height=200&width=300",
-      github: "#",
-      live: "#",
-      metrics: {
-        data: "100GB+",
-        processing: "1M records/hr",
-        accuracy: "99.5%",
-      },
+  },
+  {
+    name: "Hospital Management System",
+    tech: ["ASP.NET", "SQL Server"],
+    description:
+      "End-to-end hospital management platform supporting patient records, appointment scheduling, billing, and inventory management",
+    image: "/hospital.jpeg",
+    github: "#",
+    live: "#",
+    metrics: {
+      patients: "5K+",
+      appointments: "20K+",
+      uptime: "99.7%",
     },
-  ]
+  },
+];
+
+
 
   const tools = [
     { name: "Postman", category: "API Testing", icon: "📮" },
@@ -453,7 +413,7 @@ export default function BackendSkillsPage() {
               </h2>
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-500 mb-2">4+</div>
+                  <div className="text-3xl font-bold text-blue-500 mb-2">2+</div>
                   <div className="text-muted-foreground">Years Experience</div>
                 </div>
                 <div className="text-center">
@@ -461,7 +421,7 @@ export default function BackendSkillsPage() {
                   <div className="text-muted-foreground">Backend Projects</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-500 mb-2">15+</div>
+                  <div className="text-3xl font-bold text-blue-500 mb-2">5+</div>
                   <div className="text-muted-foreground">Technologies</div>
                 </div>
               </div>

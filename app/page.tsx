@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight, Code2, ChevronDown, Star } from "lucide-react"
+import { ArrowRight, Code2, ChevronDown, Star, Mail, Github, Linkedin, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -36,49 +36,83 @@ export default function HomePage() {
 
   if (!mounted) return null
 
+  // 🎯 PERSONALIZATION SECTION - REPLACE WITH YOUR INFO
+  const personalInfo = {
+    // Hero Section
+    name: "Mohcine Lahfari", // Your full name
+    mainTitle: "Full Stack", // Your main title
+    subTitle: "Developer", // Your subtitle/role
+    description:
+      "Passionate Full-Stack Developer specializing in React.js, Next.js, and Laravel. I build modern, scalable web applications that deliver exceptional user experiences and drive business growth.", // Your description
+
+    // Your Photo/Avatar - REPLACE WITH YOUR ACTUAL IMAGE
+    profileImage: "/v1photo.png", // Replace with your photo path
+
+    // Contact Info
+    email: "mohcinelahfari01@gmail.com", // Your email
+    phone: "+212 700534286", // Your phone
+    location: "Casablanca, Morocco", // Your location
+
+    // Social Links
+    github: "http://github.com/Mohcinelahfari", // Your GitHub
+    linkedin: "https://www.linkedin.com/in/lahfari-mohcine-353272328/v", // Your LinkedIn
+
+  }
+
+  const stats = [
+    { label: "Projects Completed", value: 25, suffix: "+" }, // Your project count
+    { label: "Happy Clients", value: 98, suffix: "%" }, // Your client satisfaction
+    { label: "Years Experience", value: 2, suffix: "+" }, // Your experience years
+    { label: "Technologies", value: 15, suffix: "+" }, // Technologies you know
+  ]
+
   const skillCategories = [
     {
-      title: "Frontend Development",
-      description: "Modern UI/UX with React, Next.js, Vue.js and cutting-edge frameworks",
-      icon: "🎨",
+      title: "Frontend Development", // Your skill category
+      description:
+        "Creating beautiful, responsive, and interactive user interfaces with React, Next.js, and modern CSS frameworks.", // Your description
+      icon: "🎨", // Your emoji/icon
       href: "/skills/frontend",
-      color: "from-blue-500 to-cyan-500",
-      technologies: ["React", "Next.js", "Vue.js", "TypeScript"],
+      color: "from-blue-500 to-blue-600",
+      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"], // Your technologies
     },
     {
-      title: "Backend Development",
-      description: "Scalable server-side solutions with Node.js, Python, and cloud services",
-      icon: "⚙️",
+      title: "Backend Development", // Your skill category
+      description:
+        "Building robust, scalable server-side applications and APIs with Laravel and modern backend technologies.", // Your description
+      icon: "⚙️", // Your emoji/icon
       href: "/skills/backend",
-      color: "from-green-500 to-emerald-500",
-      technologies: ["Node.js", "Python", "PostgreSQL", "MongoDB"],
+      color: "from-blue-600 to-blue-700",
+      technologies: ["Laravel", "PHP", "MySQL", "Node.js"], // Your technologies
     },
     {
-      title: "Mobile Development",
-      description: "Cross-platform mobile apps with React Native and Flutter",
-      icon: "📱",
+      title: "Mobile Development", // Your skill category
+      description: "Developing cross-platform mobile applications with React Native and modern mobile frameworks.", // Your description
+      icon: "📱", // Your emoji/icon
       href: "/skills/mobile",
-      color: "from-purple-500 to-pink-500",
-      technologies: ["React Native", "Flutter", "iOS", "Android"],
+      color: "from-blue-700 to-purple-600",
+      technologies: ["React Native", "Expo", "Flutter", "Mobile UI"], // Your technologies
     },
     {
-      title: "DevOps & Cloud",
-      description: "Infrastructure, deployment, and cloud architecture solutions",
-      icon: "☁️",
-      href: "/skills/devops",
-      color: "from-orange-500 to-red-500",
-      technologies: ["AWS", "Docker", "Kubernetes", "CI/CD"],
+      title: "Full-Stack Solutions", // Your skill category
+      description: "End-to-end application development from database design to user interface implementation.", // Your description
+      icon: "🚀", // Your emoji/icon
+      href: "/skills",
+      color: "from-purple-600 to-purple-700",
+      technologies: ["LAMP Stack", "API Design", "Database", "DevOps"], // Your technologies
     },
   ]
 
   const services = [
     {
-      title: "Web Development",
-      description: "Custom websites and web applications built with modern technologies for optimal performance.",
+      title: "Web Development", // Your service
+      description:
+        "Custom websites and web applications built with React, Next.js, and Laravel for optimal performance.", // Your description
       icon: Code2,
       color: "from-blue-500 to-blue-600",
-      price: "From $2,500",
+      price: "From $1,500", // Your pricing
       features: [
+        // Your service features
         "Responsive Design",
         "SEO Optimization",
         "Performance Optimization",
@@ -87,13 +121,15 @@ export default function HomePage() {
       ],
     },
     {
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications for iOS and Android with seamless user experience.",
+      title: "Mobile App Development", // Your service
+      description:
+        "Cross-platform mobile applications with React Native for iOS and Android with seamless user experience.", // Your description
       icon: Smartphone,
-      color: "from-purple-500 to-purple-600",
-      price: "From $5,000",
+      color: "from-blue-600 to-blue-700",
+      price: "From $2,500", // Your pricing
       features: [
-        "iOS & Android Apps",
+        // Your service features
+        "React Native Apps",
         "Cross-platform Solutions",
         "App Store Deployment",
         "Push Notifications",
@@ -101,130 +137,123 @@ export default function HomePage() {
       ],
     },
     {
-      title: "E-commerce Solutions",
-      description: "Complete online stores with payment integration, inventory management, and analytics.",
+      title: "E-commerce Solutions", // Your service
+      description: "Complete online stores with Laravel backend, payment integration, and inventory management.", // Your description
       icon: Globe,
-      color: "from-green-500 to-green-600",
-      price: "From $3,500",
+      color: "from-blue-700 to-purple-600",
+      price: "From $2,000", // Your pricing
       features: [
+        // Your service features
         "Payment Integration",
         "Inventory Management",
         "Order Tracking",
-        "Analytics Dashboard",
+        "Admin Dashboard",
         "Multi-vendor Support",
       ],
     },
     {
-      title: "UI/UX Design",
-      description: "Beautiful, intuitive designs that enhance user experience and drive conversions.",
+      title: "UI/UX Design", // Your service
+      description: "Beautiful, intuitive designs that enhance user experience and drive conversions.", // Your description
       icon: Palette,
-      color: "from-pink-500 to-pink-600",
-      price: "From $1,500",
-      features: ["User Research", "Wireframing", "Prototyping", "Design Systems", "Usability Testing"],
-    },
-    {
-      title: "API Development",
-      description: "Robust APIs and backend services that power your applications with scalable architecture.",
-      icon: Server,
-      color: "from-orange-500 to-orange-600",
-      price: "From $2,000",
-      features: ["RESTful APIs", "GraphQL Integration", "Database Design", "Authentication", "Documentation"],
-    },
-    {
-      title: "Consulting & Strategy",
-      description: "Technical consulting and strategic planning to guide your digital transformation journey.",
-      icon: Database,
-      color: "from-cyan-500 to-cyan-600",
-      price: "From $150/hr",
+      color: "from-purple-600 to-purple-700",
+      price: "From $800", // Your pricing
       features: [
-        "Technical Audits",
+        // Your service features
+        "User Research",
+        "Wireframing",
+        "Prototyping",
+        "Design Systems",
+        "Usability Testing",
+      ],
+    },
+    {
+      title: "API Development", // Your service
+      description:
+        "Robust APIs and backend services with Laravel that power your applications with scalable architecture.", // Your description
+      icon: Server,
+      color: "from-blue-500 to-blue-600",
+      price: "From $1,200", // Your pricing
+      features: [
+        // Your service features
+        "RESTful APIs",
+        "Laravel Backend",
+        "Database Design",
+        "Authentication",
+        "API Documentation",
+      ],
+    },
+    {
+      title: "Consulting & Mentoring", // Your service
+      description: "Technical consulting and mentoring to guide your development journey and best practices.", // Your description
+      icon: Database,
+      color: "from-blue-600 to-blue-700",
+      price: "From $50/hr", // Your pricing
+      features: [
+        // Your service features
+        "Code Reviews",
         "Architecture Planning",
         "Technology Selection",
-        "Performance Analysis",
-        "Team Training",
+        "Best Practices",
+        "Career Guidance",
       ],
     },
   ]
 
   const reviewStats = [
-    { label: "Happy Clients", value: "150+" },
-    { label: "Projects Completed", value: "200+" },
-    { label: "Average Rating", value: "4.9★" },
-    { label: "Response Time", value: "< 24h" },
+    { label: "Happy Clients", value: "25+" }, // Your client count
+    { label: "Projects Completed", value: "30+" }, // Your project count
+    { label: "Average Rating", value: "4.9★" }, // Your rating
+    { label: "Response Time", value: "< 12h" }, // Your response time
   ]
 
   const customerReviews = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      position: "CEO",
-      company: "TechStart Inc.",
-      avatar: "/placeholder.svg?height=60&width=60",
+      name: "Ahmed Benali", // Client name
+      position: "CEO", // Client position
+      company: "TechStart Morocco", // Client company
+      avatar: "/1.jpeg", // Client photo
       rating: 5,
       review:
-        "Absolutely phenomenal work! The attention to detail and innovative solutions exceeded all our expectations. Our platform's performance improved by 300% and user engagement doubled.",
-      project: "SaaS Platform",
-      date: "Dec 2023",
+        "Mohcine delivered an exceptional web application for our startup. His expertise in React and Laravel helped us launch our platform ahead of schedule. Professional, reliable, and highly skilled.", // Client review
+      project: "SaaS Platform", // Project type
+      date: "Dec 2024", // Project date
     },
     {
       id: 2,
-      name: "Michael Chen",
-      position: "CTO",
-      company: "Digital Innovations",
-      avatar: "/placeholder.svg?height=60&width=60",
+      name: "Fatima El Mansouri", // Client name
+      position: "Marketing Director", // Client position
+      company: "Digital Casa", // Client company
+      avatar: "/4.jpeg", // Client photo
       rating: 5,
       review:
-        "Working with this developer was a game-changer for our company. The code quality is exceptional, delivery was ahead of schedule, and the ongoing support has been outstanding.",
-      project: "E-commerce Platform",
-      date: "Nov 2023",
+        "Working with Mohcine was a great experience. He built our e-commerce platform with Laravel and the results exceeded our expectations. Great communication and attention to detail.", // Client review
+      project: "E-commerce Website", // Project type
+      date: "Nov 2024", // Project date
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      position: "Product Manager",
-      company: "StartupXYZ",
-      avatar: "/placeholder.svg?height=60&width=60",
+      name: "Youssef Alami", // Client name
+      position: "Product Manager", // Client position
+      company: "InnovateMA", // Client company
+      avatar: "/2.jpeg", // Client photo
       rating: 5,
       review:
-        "The most talented developer I've worked with. Transformed our vision into reality with elegant solutions and cutting-edge technology. Highly recommend for any serious project.",
-      project: "Mobile App",
-      date: "Oct 2023",
+        "Mohcine developed our mobile app using React Native and it's been running flawlessly. His technical skills and problem-solving abilities are impressive. Highly recommend!", // Client review
+      project: "Mobile App", // Project type
+      date: "Oct 2024", // Project date
     },
     {
       id: 4,
-      name: "David Kim",
-      position: "Founder",
-      company: "InnovateLab",
-      avatar: "/placeholder.svg?height=60&width=60",
+      name: "Laila Benjelloun", // Client name
+      position: "Founder", // Client position
+      company: "StartupRabat", // Client company
+      avatar: "/5.jpeg", // Client photo
       rating: 5,
       review:
-        "Incredible expertise in both frontend and backend development. Built our entire platform from scratch and it's been running flawlessly. Great communication throughout the project.",
-      project: "Analytics Dashboard",
-      date: "Sep 2023",
-    },
-    {
-      id: 5,
-      name: "Lisa Thompson",
-      position: "Marketing Director",
-      company: "GrowthCorp",
-      avatar: "/placeholder.svg?height=60&width=60",
-      rating: 5,
-      review:
-        "Our website redesign resulted in a 250% increase in conversions. The developer understood our brand perfectly and delivered beyond expectations. Professional and reliable.",
-      project: "Website Redesign",
-      date: "Aug 2023",
-    },
-    {
-      id: 6,
-      name: "James Wilson",
-      position: "Operations Manager",
-      company: "LogisticsPro",
-      avatar: "/placeholder.svg?height=60&width=60",
-      rating: 5,
-      review:
-        "Built a complex inventory management system that streamlined our entire operation. The attention to detail and problem-solving skills are remarkable. Couldn't be happier.",
-      project: "Management System",
-      date: "Jul 2023",
+        "Excellent work on our company website. Mohcine's expertise in modern web technologies helped us create a professional online presence. Fast delivery and great quality.", // Client review
+      project: "Corporate Website", // Project type
+      date: "Sep 2024", // Project date
     },
   ]
 
@@ -232,71 +261,180 @@ export default function HomePage() {
     <div className="min-h-screen bg-background relative overflow-x-hidden">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-[100px]">
+      {/* Hero Section - Enhanced with personal image */}
+      <section className="min-h-screen flex items-center justify-center relative">
         <ParticleField />
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10" />
 
         <motion.div
-          className="container mx-auto px-6 text-center z-10 relative"
+          className="container mx-auto px-6 z-10 relative"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
         >
-          <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="mb-8"
-          >
-            <div className="relative w-40 h-40 mx-auto mb-8">
-              <div
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-spin"
-                style={{ animationDuration: "3s" }}
-              />
-              <div className="absolute inset-2 rounded-full bg-background flex items-center justify-center">
-                <Code2 className="w-16 h-16 text-primary" />
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.h1
-            variants={fadeInUp}
-            className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
-          >
-            Full Stack
-            <br />
-            <span className="text-4xl md:text-6xl">Developer</span>
-          </motion.h1>
-
-          <motion.p
-            variants={fadeInUp}
-            className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
-          >
-            Crafting exceptional digital experiences with cutting-edge technologies. Specialized in building scalable
-            applications that drive business growth.
-          </motion.p>
-
-          <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link href="/projects">
-              <Button
-                size="lg"
-                className="group bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0"
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Text content */}
+            <motion.div
+              className="text-center lg:text-left"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mb-6"
               >
-                View My Projects
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
+                <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 text-sm">
+                  👋 Hello, I'm {personalInfo.name}
+                </Badge>
+              </motion.div>
 
-            <CVDownload />
+              <motion.h1
+                variants={fadeInUp}
+                className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+              >
+                {personalInfo.mainTitle}
+                <br />
+                <span className="text-4xl md:text-6xl">{personalInfo.subTitle}</span>
+              </motion.h1>
 
-            <Link href="/contact">
-              <Button variant="secondary" size="lg" className="group bg-white/10 hover:bg-white/20">
-                Get In Touch
-              </Button>
-            </Link>
-          </motion.div>
+              <motion.p
+                variants={fadeInUp}
+                className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
+              >
+                {personalInfo.description}
+              </motion.p>
 
+              {/* Contact info */}
+              <motion.div
+                variants={fadeInUp}
+                className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8 text-sm text-muted-foreground"
+              >
+                <div className="flex items-center gap-2">
+                  <MapPin className="h-4 w-4 text-blue-500" />
+                  <span>{personalInfo.location}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="h-4 w-4 text-blue-500" />
+                  <span>{personalInfo.email}</span>
+                </div>
+              </motion.div>
+
+              {/* Action buttons */}
+              <motion.div
+                variants={fadeInUp}
+                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"
+              >
+                <Link href="/projects">
+                  <Button
+                    size="lg"
+                    className="group bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0"
+                  >
+                    View My Projects
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+
+                <CVDownload />
+
+                <Link href="/contact">
+                  <Button variant="secondary" size="lg" className="group bg-white/10 hover:bg-white/20">
+                    Get In Touch
+                    <Mail className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </motion.div>
+
+              {/* Social links */}
+              <motion.div variants={fadeInUp} className="flex gap-4 justify-center lg:justify-start">
+                <Link href={personalInfo.github} target="_blank" rel="noopener noreferrer">
+                  <Button variant="ghost" size="icon" className="hover:bg-white/10">
+                    <Github className="h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">
+                  <Button variant="ghost" size="icon" className="hover:bg-white/10">
+                    <Linkedin className="h-5 w-5" />
+                  </Button>
+                </Link>
+              </motion.div>
+            </motion.div>
+
+            {/* Right side - Personal image */}
+            <motion.div
+              className="relative flex justify-center lg:justify-end"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <div className="relative">
+                {/* Animated background circles */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-3xl opacity-20"
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    rotate: [0, 180, 360],
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "linear",
+                  }}
+                />
+
+                {/* Main image container */}
+                <motion.div
+                  className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-500 to-purple-500 shadow-2xl"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 p-1 rounded-full">
+                    <div className="w-full h-full rounded-full overflow-hidden bg-background">
+                      <img
+                        src={ "/v1photo.png"}
+                        alt={personalInfo.name}
+                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Floating elements */}
+                {/* <motion.div
+                  className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg"
+                  animate={{
+                    y: [0, -10, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <Code2 className="h-8 w-8" />
+                </motion.div> */}
+
+                <motion.div
+                  className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white shadow-lg"
+                  animate={{
+                    y: [0, 10, 0],
+                  }}
+                  transition={{
+                    duration: 2.5,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "easeInOut",
+                    delay: 0.5,
+                  }}
+                >
+                  ⚡
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Scroll indicator */}
           <motion.div
             className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
             animate={{ y: [0, 10, 0] }}
@@ -317,12 +455,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            {[
-              { label: "Projects Completed", value: 150, suffix: "+" },
-              { label: "Happy Clients", value: 98, suffix: "%" },
-              { label: "Years Experience", value: 5, suffix: "+" },
-              { label: "Technologies", value: 25, suffix: "+" },
-            ].map((stat, index) => (
+            {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 className="text-center"
@@ -507,7 +640,7 @@ export default function HomePage() {
           </motion.div>
 
           {/* Reviews Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {customerReviews.map((review, index) => (
               <motion.div
                 key={review.id}
