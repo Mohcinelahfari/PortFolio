@@ -142,9 +142,10 @@ export function ContactForm() {
       const response = await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
         EMAILJS_CONFIG.TEMPLATE_ID,
-        templateParams,
+        templateParams as Record<string, unknown>,
         EMAILJS_CONFIG.PUBLIC_KEY,
       )
+
 
       if (response.status === 200) {
         setFormState({

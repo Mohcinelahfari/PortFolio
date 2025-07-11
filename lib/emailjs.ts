@@ -6,13 +6,13 @@ export const EMAILJS_CONFIG = {
 }
 
 // Email template parameters interface
-export interface EmailTemplateParams {
+export interface EmailTemplateParams extends Record<string, unknown> {
   from_name: string
   from_email: string
-  phone?: string
+  phone: string
   project_type: string
-  budget?: string
-  timeline?: string
+  budget: string
+  timeline: string
   message: string
   to_name: string
   reply_to: string
